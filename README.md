@@ -1,8 +1,5 @@
 # SAD DADS - concert tracker
 
-!['Sad Dads' landing page with an 'enter site' link below.](/images/SAD-DADS-landing.png)
-
-
 ## Description
 
 A full stack web application for tracking personal concert attendance information. Originally inspired by and built for tracking The National concerts attended. _(Users may...if they wish...use the app to track their own preferred artists...)_.
