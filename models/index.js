@@ -8,7 +8,7 @@ const Concert = mongoose.model('Concert', concertSchema)
 const Venue = mongoose.model('Concert', venueSchema)
 
 module.exports = {
-    Artist,
+    Venue,
     Concert,
-    Venue
+    Artist,
 }
