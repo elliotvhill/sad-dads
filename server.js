@@ -17,27 +17,42 @@ app.get('/artists', async (req, res) => {
     res.json(artists)
 })
 app.get('/artists/:id', async (req, res) => {
-    const { id } = req.params
-    const artist = await Artist.findById(id)
-    res.json(artist)
+    try {
+        const { id } = req.params
+        const artist = await Artist.findById(id)
+        res.json(artist)
+    } catch (e) {
+        console.log(e)
+        res.send('Artist not found!')
+    }
 })
 app.get('/concerts', async (req, res) => {
     const concerts = await Concert.find({})
     res.json(concerts)
 })
 app.get('/concerts/:id', async (req, res) => {
-    const { id } = req.params
-    const concert = await Concert.findById(id)
-    res.json(concert)
+    try {
+        const { id } = req.params
+        const concert = await Concert.findById(id)
+        res.json(concert)
+    } catch (e) {
+        console.log(e)
+        res.send('Concert not found!')
+    }
 })
 app.get('/venues', async (req, res) => {
     const venues = await Venue.find({})
     res.json(venues)
 })
 app.get('/venues/:id', async (req, res) => {
-    const { id } = req.params
-    const venue = await Venue.findById(id)
-    res.json(venue)
+    try {
+        const { id } = req.params
+        const venue = await Venue.findById(id)
+        res.json(venue)
+    } catch (e) {
+        console.log(e)
+        res.send('Venue not found!')
+    }
 })
 
 app.listen(PORT, () => {
